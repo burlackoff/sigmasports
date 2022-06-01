@@ -10,4 +10,17 @@
     gap: 32px;
     flex-wrap: wrap;
   }
+
+  &__link {
+    text-decoration: none;
+    color: #151515;
+    transition: 0.2s;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
 }
