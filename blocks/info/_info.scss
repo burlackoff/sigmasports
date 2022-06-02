@@ -14,12 +14,17 @@
     margin-top: 50px;
   }
 
-  &__link {
+  &__name-bike {
+    margin: 0;
     margin-top: 167px;
+    color: #151515;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
     display: flex;
   }
 
-  &__link::after {
+  &__name-bike::after {
     content: '';
     margin-left: 30px;
     width: 132px;
@@ -43,6 +48,9 @@
     z-index: 1;
   }
 
+  &__card-wrapper {
+    padding: 267px 0 79px 0;
+  }
   &__card-bike {
     background: url('../../images/info-card-bike.png') center center / cover no-repeat;
     box-sizing: border-box;
