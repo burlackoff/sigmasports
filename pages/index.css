@@ -157,4 +157,53 @@
 }
 .quote__image {
   max-width: 650px;
+}
+
+.gradient-road {
+  width: 100%;
+  padding: 60px 0 60px 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.gradient-road__subtitle {
+  margin-top: 50px;
+}
+.gradient-road__wrapper {
+  margin-top: 80px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+.gradient-road__icon {
+  width: 100px;
+  height: 40px;
+  background: url(../../images/icons/gradient-road-highway.svg) center center/contain no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+}
+.gradient-road__image {
+  max-width: 650px;
+  aspect-ratio: 1.625/1;
+}
+.gradient-road__buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.gradient-road__button {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(235, 235, 235) url(../../images/icons/button-back.svg) center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.gradient-road__button:hover {
+  opacity: 0.6;
+}
+.gradient-road__button_right {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=index.css.map */
