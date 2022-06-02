@@ -102,6 +102,9 @@
   top: 347px;
   z-index: 1;
 }
+.info__card-wrapper {
+  padding: 267px 0 79px 0;
+}
 .info__card-bike {
   background: url("../../images/info-card-bike.png") center center/cover no-repeat;
   box-sizing: border-box;
@@ -114,4 +117,10 @@
   right: 0;
   max-width: 610px;
   z-index: 0;
+}
+
+.quote {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 120px 120px 60px 120px;
 }/*# sourceMappingURL=index.css.map */

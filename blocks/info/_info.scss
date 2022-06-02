@@ -43,6 +43,9 @@
     z-index: 1;
   }
 
+  &__card-wrapper {
+    padding: 267px 0 79px 0;
+  }
   &__card-bike {
     background: url('../../images/info-card-bike.png') center center / cover no-repeat;
     box-sizing: border-box;
