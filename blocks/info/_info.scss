@@ -14,12 +14,17 @@
     margin-top: 50px;
   }
 
-  &__link {
+  &__name-bike {
+    margin: 0;
     margin-top: 167px;
+    color: #151515;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
     display: flex;
   }
 
-  &__link::after {
+  &__name-bike::after {
     content: '';
     margin-left: 30px;
     width: 132px;

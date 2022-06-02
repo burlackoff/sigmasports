@@ -1,0 +1,82 @@
+.bicycle {
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  &__wrapper-head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {}
+
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+  }
+
+  &__menu-link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: rgba(34, 34, 34, .7);
+    transition: .2s;
+
+    &_active {
+      color: rgba(21, 21, 21, 1);
+    }
+
+    &_active:hover {
+      opacity: 0.75;
+    }
+  }
+  
+  &__menu-link:hover {
+    opacity: 0.6;
+  }
+
+  &__list-card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 22px;
+  }
+
+  &__link-card {
+    width: 380px;
+    height: 380px;
+    box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 340px;
+    height: 340px;
+  }
+
+  &__name-card {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #151515;
+  }
+}
