@@ -1,0 +1,60 @@
+.info {
+  width: 100%;
+  padding: 80px 0 0 120px;
+  position: relative;
+  box-sizing: border-box;
+  height: 856px;
+  display: flex;
+  
+  &__subtitle {
+    margin-top: 50px;
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
+
+  &__link {
+    margin-top: 167px;
+    display: flex;
+  }
+
+  &__link::after {
+    content: '';
+    margin-left: 30px;
+    width: 132px;
+    height: 0;
+    display: inline-block;
+    align-self: center;
+    border: 1px solid #D7D4D4;
+  }
+
+  &__card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 300px;
+    box-shadow: -20px 60px 220px 0px rgba(0, 0, 0, 0.44);
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    position: sticky;
+    top: 347px;
+    z-index: 1;
+  }
+
+  &__card-bike {
+    background: url('../../images/info-card-bike.png') center center / cover no-repeat;
+    box-sizing: border-box;
+    width: 340px;
+    height: 260px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    max-width: 610px;
+    z-index: 0;
+  }
+}

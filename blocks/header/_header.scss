@@ -2,4 +2,8 @@
   width: 100%;
   padding: 28px 120px;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #F4F4F4;;
 }

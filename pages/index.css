@@ -1,15 +1,40 @@
+@import '../vendor/normalize.css';
+@import '../vendor/fonts/fonts.css';
 .page {
   max-width: 1440px;
   margin: auto;
   background-color: #F4F4F4;
   font-family: "Inter", sans-serif;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 55px;
+  line-height: 60px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  max-width: 460px;
+}
+
+.section-subtitle {
+  margin: 0;
   font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #222222;
+  opacity: 0.7;
+  max-width: 460px;
 }
 
 .header {
   width: 100%;
   padding: 28px 120px;
   box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #F4F4F4;
 }
 
 .nav {
@@ -23,4 +48,70 @@
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
+}
+.nav__link {
+  text-decoration: none;
+  color: #151515;
+  transition: 0.2s;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.nav__link:hover {
+  opacity: 0.75;
+}
+
+.info {
+  width: 100%;
+  padding: 80px 0 0 120px;
+  position: relative;
+  box-sizing: border-box;
+  height: 856px;
+  display: flex;
+}
+.info__subtitle {
+  margin-top: 50px;
+}
+.info__button {
+  margin-top: 50px;
+}
+.info__link {
+  margin-top: 167px;
+  display: flex;
+}
+.info__link::after {
+  content: "";
+  margin-left: 30px;
+  width: 132px;
+  height: 0;
+  display: inline-block;
+  align-self: center;
+  border: 1px solid #D7D4D4;
+}
+.info__card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 300px;
+  box-shadow: -20px 60px 220px 0px rgba(0, 0, 0, 0.44);
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 347px;
+  z-index: 1;
+}
+.info__card-bike {
+  background: url("../../images/info-card-bike.png") center center/cover no-repeat;
+  box-sizing: border-box;
+  width: 340px;
+  height: 260px;
+}
+.info__image {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  max-width: 610px;
+  z-index: 0;
 }/*# sourceMappingURL=index.css.map */
