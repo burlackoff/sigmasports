@@ -7,6 +7,7 @@
   &__wrapper-head {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__title {}
@@ -58,18 +59,15 @@
   }
 
   &__link-card {
-    width: 380px;
-    height: 380px;
+    padding: 20px;
     box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__image {
-    width: 340px;
-    height: 340px;
+    max-width: 340px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 
   &__name-card {

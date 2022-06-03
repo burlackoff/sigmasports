@@ -1,0 +1,40 @@
+.train {
+  width: 100%;
+  padding: 150px 120px 120px 120px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  &__subtitle {
+    margin-top: 50px;
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: 182px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    transition: .2s;
+    color: #151515;
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
+
+  &__image {
+    max-width: 580px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
