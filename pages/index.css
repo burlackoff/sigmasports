@@ -5,6 +5,7 @@
   margin: auto;
   background-color: #F4F4F4;
   font-family: "Inter", sans-serif;
+  color: #151515;
 }
 
 .section-title {
@@ -319,4 +320,30 @@
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.footer {
+  padding: 80px 120px 60px 120px;
+  box-sizing: border-box;
+  background-color: #EFEFEF;
+}
+.footer__title {
+  margin: 0;
+  margin-bottom: 50px;
+  max-width: 229px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.footer__copyright {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19.59px;
+  font-weight: 600;
+  color: #CFCFCF;
 }/*# sourceMappingURL=index.css.map */
