@@ -5,6 +5,7 @@
   margin: auto;
   background-color: #F4F4F4;
   font-family: "Inter", sans-serif;
+  color: #151515;
 }
 
 .section-title {
@@ -121,15 +122,15 @@
   top: 20px;
   right: 0;
   max-width: 610px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .quote {
   box-sizing: border-box;
-  width: 100%;
   padding: 120px 120px 60px 120px;
   display: flex;
-  gap: 80px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .quote__wrapper {
   display: flex;
@@ -162,6 +163,9 @@
 }
 .quote__image {
   max-width: 650px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .gradient-road {
@@ -222,6 +226,7 @@
 .bicycle__wrapper-head {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .bicycle__menu {
   list-style: none;
@@ -263,17 +268,14 @@
   gap: 22px;
 }
 .bicycle__link-card {
-  width: 380px;
-  height: 380px;
+  padding: 20px;
   box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .bicycle__image {
-  width: 340px;
-  height: 340px;
+  max-width: 340px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 .bicycle__name-card {
   margin: 0;
@@ -281,4 +283,67 @@
   line-height: 22px;
   font-weight: 600;
   color: #151515;
+}
+
+.train {
+  width: 100%;
+  padding: 150px 120px 120px 120px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.train__subtitle {
+  margin-top: 50px;
+}
+.train__list {
+  margin: 0;
+  margin-top: 182px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.train__link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  transition: 0.2s;
+  color: #151515;
+}
+.train__link:hover {
+  opacity: 0.75;
+}
+.train__image {
+  max-width: 580px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer {
+  padding: 80px 120px 60px 120px;
+  box-sizing: border-box;
+  background-color: #EFEFEF;
+}
+.footer__title {
+  margin: 0;
+  margin-bottom: 50px;
+  max-width: 229px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.footer__copyright {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19.59px;
+  font-weight: 600;
+  color: #CFCFCF;
 }/*# sourceMappingURL=index.css.map */
