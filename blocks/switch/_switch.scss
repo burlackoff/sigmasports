@@ -38,11 +38,4 @@
   &__slider_active::before {
     transform: translateX(20px);
   }
-  // &__input:checked + &__slider {
-  //   background-color: #545454;
-  // }
-
-  // &__input:checked + &__slider::before {
-  //   transform: translateX(20px);
-  // }
 }
