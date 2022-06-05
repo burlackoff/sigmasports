@@ -301,6 +301,7 @@
   box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   transition: transform 0.2s;
+  background-color: #F4F4F4;
 }
 .bicycle__link-card:hover {
   transform: scale(1.1);
