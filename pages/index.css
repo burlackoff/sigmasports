@@ -377,6 +377,59 @@
   color: #CFCFCF;
 }
 
+.form {
+  position: relative;
+  width: 360px;
+}
+.form__input {
+  padding: 11px 20px;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  width: 360px;
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+}
+.form__input:hover {
+  cursor: pointer;
+}
+.form__input:hover::-moz-placeholder {
+  color: rgb(21, 21, 21);
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.form__input:hover:-ms-input-placeholder {
+  color: rgb(21, 21, 21);
+  -ms-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.form__input:hover::placeholder {
+  color: rgb(21, 21, 21);
+  transition: color 0.2s;
+}
+.form__input:focus {
+  border-color: rgb(199, 199, 199);
+  outline: none;
+}
+.form__button {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+.form__button_active {
+  display: block;
+}
+
 .switch-block {
   display: flex;
   justify-content: center;

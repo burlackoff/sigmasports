@@ -186,10 +186,15 @@
     </main>
     <footer class="footer">
       <h2 class="footer__title">Подпишитесь на рассылку —</h2>
-      <form class="form">
-        <label>
-          <input />
-        </label>
+      <form name="form" class="form">
+        <input
+          type="email"
+          name="mail"
+          placeholder="Ваш e-mail"
+          class="form__input"
+          required
+        />
+        <button type="submit" class="form__button">ok</button>
       </form>
       <div class="footer__wrapper">
         <p class="footer__copyright">&copy;Road Club 2021</p>
