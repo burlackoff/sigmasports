@@ -1,4 +1,6 @@
 .button {
+  display: block;
+  box-sizing: border-box;
   padding: 16px 10px;
   width: 180px;
   color: white;
@@ -13,6 +15,8 @@
   letter-spacing: 1px;
   font-weight: 600;
   transition: background .3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
 }
 
 .button:hover{
