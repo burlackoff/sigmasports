@@ -12,13 +12,13 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Покрытия и градиенты</a>
+            <a href="#gradient-road" class="nav__link">Покрытия и градиенты</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Велосипеды</a>
+            <a href="#bicycle" class="nav__link">Велосипеды</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Тренировки</a>
+            <a href="#train" class="nav__link">Тренировки</a>
           </li>
         </ul>
       </nav>
@@ -32,13 +32,7 @@
             живописным маршрутам – нужно только определиться с выбором
             велосипеда и отправиться в путь.
           </p>
-          <button
-            type="button"
-            aria-label="Подробнее."
-            class="info__button button"
-          >
-            Подробнее
-          </button>
+          <a href="#" class="button info__button">Подробнее</a>
           <p class="info__name-bike">Cannondale Systemsix</p>
         </div>
         <div class="info__card-wrapper">
@@ -71,7 +65,7 @@
           </div>
         </div>
       </article>
-      <section class="gradient-road">
+      <section id="gradient-road" class="gradient-road">
         <h2 class="gradient-road__title section-title">Шоссе</h2>
         <p class="gradient-road__subtitle section-subtitle">
           На шоссейном велосипеде можно ездить по асфальту на разных градиентах:
@@ -104,7 +98,7 @@
           ></button>
         </div>
       </section>
-      <section class="bicycle">
+      <section id="bicycle" class="bicycle">
         <div class="bicycle__wrapper-head">
           <h2 class="bicycle__title section-title">Велосипеды</h2>
           <ul class="bicycle__menu">
@@ -150,7 +144,7 @@
           </li>
         </ul>
       </section>
-      <section class="train">
+      <section id="train" class="train">
         <div class="train__wrapper">
           <h2 class="train__title section-title">Тренировки</h2>
           <p class="train__subtitle section-subtitle">
@@ -186,19 +180,36 @@
     </main>
     <footer class="footer">
       <h2 class="footer__title">Подпишитесь на рассылку —</h2>
-      <form class="form">
-        <label>
-          <input />
-        </label>
+      <form name="form" class="form">
+        <input
+          type="email"
+          name="mail"
+          placeholder="Ваш e-mail"
+          class="form__input"
+          required
+        />
+        <button type="submit" class="form__button">ok</button>
       </form>
       <div class="footer__wrapper">
         <p class="footer__copyright">&copy;Road Club 2021</p>
-        <div class="footer__buttons">
-          <button></button>
-          <button></button>
-          <button></button>
+        <div class="switch-block">
+          <img
+            src="./images/icons/light.svg"
+            alt=""
+            class="switch-block__image-light"
+          />
+          <label class="switch">
+            <input type="checkbox" class="switch__input" />
+            <span class="switch__slider"></span>
+          </label>
+          <img
+            src="./images/icons/dark.svg"
+            alt=""
+            class="switch-block__image-dark"
+          />
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

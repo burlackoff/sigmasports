@@ -46,6 +46,11 @@
     position: sticky;
     top: 347px;
     z-index: 1;
+    transition: transform .2s;
+  }
+
+  &__card-link:hover {
+    transform: scale(1.1);
   }
 
   &__card-wrapper {
