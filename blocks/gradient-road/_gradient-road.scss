@@ -2,7 +2,25 @@
   width: 100%;
   padding: 60px 0 60px 120px;
   box-sizing: border-box;
-  overflow: hidden;
+
+
+  &__description {
+    position: relative;
+    width: 460px;
+    height: 222px;
+  }
+
+  &__info {
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(100%);
+    transition: transform .9s;
+
+    &_active {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
 
   &__subtitle {margin-top: 50px;}
 
@@ -11,10 +29,12 @@
     display: flex;
     height: 400px;
     overflow: hidden;
+    gap: 100px;
   }
 
   &__icons {
     position: relative;
+    margin-left: -100px;
   }
 
   &__icon {
@@ -24,6 +44,7 @@
     left: 0;
     bottom: 16px;
     z-index: 1;
+    transition: all ease 1s;
   }
   
   &__images {
