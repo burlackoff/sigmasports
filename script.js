@@ -48,6 +48,9 @@ const sliderIcon = document.querySelector('.gradient-road__icons');
 const slidesIcon = document.querySelectorAll('.gradient-road__icon');
 const iconCounter = slidesIcon.length;
 let activeIconIndex = 0;
+const textSlide = document.querySelectorAll('.gradient-road__info');
+const textCounter = textSlide.length;
+let activeTextSlide = 0;
 
 function init() {
   let counter = 0;
@@ -78,7 +81,7 @@ function next() {
   btnNext.removeEventListener('click', nextSlide);
   btnPrev.removeEventListener('click', nextSlide);
   slideIcon('next')
-
+  slideText('next')
   let slides2 = document.querySelectorAll('.gradient-road__image');
   let slider = document.querySelector('.gradient-road__images');
 
@@ -102,7 +105,7 @@ function prev() {
   btnNext.removeEventListener('click', nextSlide);
   btnPrev.removeEventListener('click', nextSlide);
   slideIcon('prev')
-  
+  slideText('prev')
   let slides3 = document.querySelectorAll('.gradient-road__image');
   let slider1 = document.querySelector('.gradient-road__images');
   let slide = slides3[slides3.length - 1].cloneNode(true);
@@ -139,5 +142,27 @@ function slideIcon(direction) {
   setTimeout(() => {
     slidesIcon[activeIconIndex].style.left = 100 + 'px'
   }, 500)
+}
+
+function slideText(direction) {
+  deleClassActive()
+  if (direction == 'next') {
+    activeTextSlide++
+    if (activeTextSlide === textCounter) {
+      activeTextSlide = 0;
+    }
+  } else if (direction === 'prev') {
+    activeTextSlide--;
+    if (activeTextSlide < 0) {
+      activeTextSlide = textCounter - 1;
+    }
+  }
+  textSlide[activeTextSlide].classList.add('gradient-road__info_active');
+}
+
+function deleClassActive() {
+  textSlide.forEach(text => {
+    text.classList.remove('gradient-road__info_active');
+  })
 }
 //finish
