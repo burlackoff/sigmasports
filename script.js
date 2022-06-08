@@ -69,6 +69,7 @@ function nextSlide(){
 
 function next() {
   btnNext.removeEventListener('click', nextSlide);
+  btnPrev.removeEventListener('click', nextSlide);
   let slides2 = document.querySelectorAll('.gradient-road__image');
   let slider = document.querySelector('.gradient-road__images');
   slides2.forEach(item => {
@@ -81,10 +82,12 @@ function next() {
     slider.append(slide);
     slides2[0].remove();
     btnNext.addEventListener('click', nextSlide);
+    btnPrev.addEventListener('click', nextSlide);
   }, 1000); 
 }
 
 function prev() {
+  btnNext.removeEventListener('click', nextSlide);
   btnPrev.removeEventListener('click', nextSlide);
   let slides3 = document.querySelectorAll('.gradient-road__image');
   let slider1 = document.querySelector('.gradient-road__images');
@@ -99,6 +102,7 @@ function prev() {
   })
 
   setTimeout(() => {
+    btnNext.addEventListener('click', nextSlide);
     btnPrev.addEventListener('click', nextSlide);
   }, 1000);
 }
