@@ -11,10 +11,12 @@
     display: flex;
     height: 400px;
     overflow: hidden;
+    gap: 100px;
   }
 
   &__icons {
     position: relative;
+    margin-left: -100px;
   }
 
   &__icon {
@@ -24,6 +26,7 @@
     left: 0;
     bottom: 16px;
     z-index: 1;
+    transition: all ease 1s;
   }
   
   &__images {
