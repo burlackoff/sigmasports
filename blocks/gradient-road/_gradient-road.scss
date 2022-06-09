@@ -11,14 +11,14 @@
   }
 
   &__info {
-    visibility: hidden;
     position: absolute;
     transform: translateY(100%);
-    transition: transform .9s;
+    transition: opacity .5s, transform .9s;
+    opacity: 0;
 
     &_active {
       transform: translateY(0);
-      visibility: visible;
+      opacity: 1;
     }
   }
 
