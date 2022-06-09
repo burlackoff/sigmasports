@@ -166,3 +166,35 @@ function deleClassActive() {
   })
 }
 //finish
+
+//Слайдер велосипедов
+//start
+const btnList = document.querySelectorAll('.bicycle__menu-link');
+const bikeList = document.querySelectorAll('.bicycle__list-card');
+
+
+
+btnList.forEach(btn => {
+  btn.addEventListener('click', activeBtn) 
+})
+
+function activeBtn() {
+  removeClass()
+  this.classList.add('bicycle__menu-link_active');
+  if (this === btnList[0]) {
+    bikeList[0].classList.add('bicycle__list-card_active');
+  } else if (this === btnList[1]) {
+    bikeList[1].classList.add('bicycle__list-card_active');
+  } else if (this === btnList[2]) {
+    bikeList[2].classList.add('bicycle__list-card_active');
+  }
+}
+
+function removeClass() {
+  btnList.forEach(btn => {
+    btn.classList.remove('bicycle__menu-link_active');
+  })
+  bikeList.forEach(card => {
+    card.classList.remove('bicycle__list-card_active');
+  })
+}
