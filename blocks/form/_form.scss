@@ -4,7 +4,7 @@
 
   &__input {
     padding: 11px 20px;
-    border: 1px solid rgba(199, 199, 199, 0.5);
+    border: 1px solid $color-br;
     width: 360px;
     font-size: 13px;
     line-height: 28px;
@@ -12,7 +12,7 @@
     border-radius: 4px;
     background-color: transparent;
     box-sizing: border-box;
-    color: rgba(34, 34, 34, 1);
+    color: $color-main-text;
   }
 
   &__input:hover {
@@ -20,12 +20,12 @@
   }
 
   &__input:hover::placeholder {
-    color: rgba(21, 21, 21, 1);
+    color: $color-main-text;
     transition: color .2s;
   }
 
   &__input:focus {
-    border-color: rgba(199, 199, 199, 1);
+    border-color: $color-br-focus;
     outline: none;
   }
 

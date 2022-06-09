@@ -11,8 +11,8 @@
 .section-title {
   margin: 0;
   font-size: 55px;
-  line-height: 60px;
   font-weight: 700;
+  line-height: 60px;
   letter-spacing: -0.5px;
   max-width: 460px;
 }
@@ -51,9 +51,9 @@
   flex-wrap: wrap;
 }
 .nav__link {
+  transition: 0.2s;
   text-decoration: none;
   color: #151515;
-  transition: 0.2s;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -78,12 +78,11 @@
 }
 .info__name-bike {
   margin: 0;
-  margin-top: 167px;
-  color: #151515;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
   display: flex;
+  margin-top: 167px;
 }
 .info__name-bike::after {
   content: "";
@@ -134,7 +133,7 @@
   box-sizing: border-box;
   padding: 16px 10px;
   width: 180px;
-  color: white;
+  color: #FFFFFF;
   background-image: linear-gradient(90deg, #319E75 50%, #24B47E 50%);
   background-position: 100%;
   background-size: 200%;
@@ -168,27 +167,26 @@
 }
 .quote__description {
   margin: 0;
-  color: #151515;
-  max-width: 470px;
   font-size: 34px;
   line-height: 44px;
   font-weight: 600;
   letter-spacing: -0.5px;
+  max-width: 470px;
 }
 .quote__title {
   margin: 0;
-  color: #151515;
   font-size: 20px;
   line-height: 32px;
   font-weight: 500;
 }
 .quote__subtitle {
   margin: 0;
-  margin-top: 6px;
-  color: rgba(34, 34, 34, 0.7);
+  color: #222222;
+  opacity: 0.7;
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
+  margin-top: 6px;
 }
 .quote__image {
   max-width: 650px;
@@ -208,14 +206,14 @@
   height: 222px;
 }
 .gradient-road__info {
-  visibility: hidden;
   position: absolute;
   transform: translateY(100%);
-  transition: transform 0.9s;
+  transition: opacity 0.5s, transform 0.9s;
+  opacity: 0;
 }
 .gradient-road__info_active {
   transform: translateY(0);
-  visibility: visible;
+  opacity: 1;
 }
 .gradient-road__subtitle {
   margin-top: 50px;
@@ -293,21 +291,22 @@
 }
 .bicycle__menu-link {
   padding: 0;
-  margin: 0;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 600;
   color: rgba(34, 34, 34, 0.7);
   transition: 0.2s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
 }
 .bicycle__menu-link:hover {
   opacity: 0.6;
 }
 .bicycle__menu-link_active {
-  color: rgb(21, 21, 21);
+  font-weight: 600;
+  color: #151515;
 }
 .bicycle__menu-link_active:hover {
   opacity: 0.75;
@@ -323,14 +322,14 @@
   padding: 0;
   display: flex;
   gap: 30px;
-  visibility: hidden;
   position: absolute;
-  transform: translateX(100%);
-  transition: transform 0.9s;
+  transform: translateY(100%);
+  transition: opacity 0.5s, transform 0.8s;
+  opacity: 0;
 }
 .bicycle__list-card_active {
-  visibility: visible;
-  transform: translateX(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 .bicycle__item-card {
   display: flex;
@@ -358,8 +357,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 600;
-  color: #151515;
+  font-weight: 400;
 }
 
 .train {
@@ -382,11 +380,11 @@
   gap: 30px;
 }
 .train__link {
+  transition: 0.2s;
   text-decoration: none;
   font-size: 18px;
   line-height: 28px;
   font-weight: 600;
-  transition: 0.2s;
   color: #151515;
 }
 .train__link:hover {
@@ -406,11 +404,11 @@
 }
 .footer__title {
   margin: 0;
-  margin-bottom: 50px;
-  max-width: 229px;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
+  margin-bottom: 50px;
+  max-width: 229px;
 }
 .footer__wrapper {
   display: flex;
@@ -439,23 +437,23 @@
   border-radius: 4px;
   background-color: transparent;
   box-sizing: border-box;
-  color: rgb(34, 34, 34);
+  color: #151515;
 }
 .form__input:hover {
   cursor: pointer;
 }
 .form__input:hover::-moz-placeholder {
-  color: rgb(21, 21, 21);
+  color: #151515;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
 .form__input:hover:-ms-input-placeholder {
-  color: rgb(21, 21, 21);
+  color: #151515;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
 }
 .form__input:hover::placeholder {
-  color: rgb(21, 21, 21);
+  color: #151515;
   transition: color 0.2s;
 }
 .form__input:focus {

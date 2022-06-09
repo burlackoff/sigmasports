@@ -20,12 +20,8 @@
   }
 
   &__link {
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 600;
     transition: .2s;
-    color: #151515;
+    @include text-link;
   }
 
   &__link:hover {

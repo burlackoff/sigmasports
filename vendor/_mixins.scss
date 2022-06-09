@@ -1,0 +1,93 @@
+
+@mixin title-text {
+  margin: 0;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+}
+
+@mixin text-description {
+  margin: 0;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+@mixin quote-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+@mixin quote-subtitle {
+  margin: 0;
+  color: $color-text;
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@mixin subtitle-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $color-text;
+  opacity: 0.7;
+}
+
+@mixin text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin text-bike {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin text-bike-link {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@mixin nav-text-link {
+  text-decoration: none;
+  color: $color-main-text;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+@mixin text-link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: $color-main-text;
+}
+
+@mixin text-footer {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600; 
+}
+
+@mixin text-copyright {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19.59px;
+  font-weight: 600;
+  color: $color-copyright;
+}

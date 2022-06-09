@@ -1,10 +1,16 @@
 //Кнопка переключения темы
 //start
 const buttonSwitchTheme = document.querySelector('.switch__slider');
+const theme = document.querySelector("#theme-link");
 
 buttonSwitchTheme.addEventListener('click', () => {
   buttonSwitchTheme.classList.toggle('switch__slider_active');
   buttonSwitchTheme.classList.toggle('switch__slider_active::before');
+  if (theme.getAttribute("href") == "./pages/index.css") {
+    theme.href = "./pages/index_dark-theme.css";
+  } else {
+    theme.href = "./pages/index.css";
+  }
 })
 //finish
 
@@ -198,3 +204,4 @@ function removeClass() {
     card.classList.remove('bicycle__list-card_active');
   })
 }
+//finish
