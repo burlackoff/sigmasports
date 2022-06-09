@@ -20,13 +20,20 @@
   }
 
   &__menu-link {
-    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
     font-size: 18px;
     line-height: 28px;
     font-weight: 600;
     color: rgba(34, 34, 34, .7);
     transition: .2s;
 
+    &:hover{
+      opacity: 0.6;
+    }
     &_active {
       color: rgba(21, 21, 21, 1);
     }
@@ -35,9 +42,11 @@
       opacity: 0.75;
     }
   }
-  
-  &__menu-link:hover {
-    opacity: 0.6;
+
+  &__wrapper-card {
+    display: flex;
+    position: relative;
+    height: 350px;
   }
 
   &__list-card {
@@ -46,7 +55,17 @@
     padding: 0;
     display: flex;
     gap: 30px;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform .9s;
+
+    &_active {
+      visibility: visible;
+      transform: translateX(0);
+    }
   }
+
 
   &__item-card {
     display: flex;
