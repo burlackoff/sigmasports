@@ -258,7 +258,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgb(67, 67, 67) url(../../images/icons/button-back_dark-theme.svg) center no-repeat;
+  background: rgb(67, 67, 67) url(../images/icons/button-back_dark-theme.svg) center no-repeat;
   border: none;
   cursor: pointer;
   transition: 0.2s;
@@ -486,12 +486,12 @@
 .switch-block__image-dark {
   width: 20px;
   height: 20px;
-  background: url(../../images/icons/dark_dark-theme.svg) center no-repeat;
+  background: url(../images/icons/dark_dark-theme.svg) center no-repeat;
 }
 .switch-block__image-light {
   width: 28px;
   height: 28px;
-  background: url(../../images/icons/light_dark-theme.svg) center no-repeat;
+  background: url(../images/icons/light_dark-theme.svg) center no-repeat;
 }
 
 .switch {
