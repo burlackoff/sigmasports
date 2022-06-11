@@ -2,8 +2,9 @@
   box-sizing: border-box;
   padding: 120px 120px 60px 120px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 80px;
 
   &__wrapper {
     display: flex;
@@ -14,6 +15,10 @@
   &__description {
     @include text-description;
     max-width: 470px;
+  }
+
+  &__figcaption {
+    margin-top: 40px;
   }
 
   &__title {

@@ -116,6 +116,12 @@
   }
 }
 
+@mixin ml {
+  @media screen and (max-width: map-get($breakpoints, 'ml')) {
+    @content;
+  }
+}
+
 @mixin xl {
   @media screen and (max-width: map-get($breakpoints, 'xl')) {
     @content;
