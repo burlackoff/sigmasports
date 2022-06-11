@@ -461,6 +461,7 @@
   outline: none;
 }
 .form__button {
+  color: #151515;
   display: none;
   cursor: pointer;
   position: absolute;
@@ -481,6 +482,16 @@
   justify-content: center;
   align-items: center;
   gap: 22px;
+}
+.switch-block__image-dark {
+  width: 20px;
+  height: 20px;
+  background: url(../../images/icons/dark.svg) center no-repeat;
+}
+.switch-block__image-light {
+  width: 28px;
+  height: 28px;
+  background: url(../../images/icons/light.svg) center no-repeat;
 }
 
 .switch {
