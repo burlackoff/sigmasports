@@ -44,7 +44,7 @@
   &__wrapper-card {
     display: flex;
     position: relative;
-    height: 350px;
+    height: 430px;
   }
 
   &__list-card {
@@ -57,10 +57,12 @@
     transform: translateY(100%);
     transition: opacity .5s, transform .8s;
     opacity: 0;
+    z-index: -1;
 
     &_active {
       transform: translateY(0);
       opacity: 1;
+      z-index: auto;
     }
   }
 

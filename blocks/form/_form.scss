@@ -1,11 +1,11 @@
 .form {
   position: relative;
-  width: 360px;
+  max-width: 360px;
 
   &__input {
     padding: 11px 20px;
-    border: 1px solid $color-br;
-    width: 360px;
+    border: 1px solid $color-br;  
+    width: 100%;
     font-size: 13px;
     line-height: 28px;
     font-weight: 500;
