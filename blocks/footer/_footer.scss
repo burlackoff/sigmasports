@@ -1,7 +1,7 @@
 .footer {
   padding: 80px 120px 60px 120px;
   box-sizing: border-box;
-  background-color: #EFEFEF;
+  background-color: $color-bg-footer;
 
   &__title {
     @include text-footer;
