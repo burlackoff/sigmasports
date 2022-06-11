@@ -8,3 +8,12 @@ $color-bg-footer: #EFEFEF;
 $color-br: rgba(199, 199, 199, 0.5);
 $color-br-focus: rgb(199, 199, 199);
 $color-copyright: #CFCFCF;
+
+
+$breakpoints: (
+  'xl': 1440px,
+  'lg': 1190px,
+  'md': 768px,
+  'sm': 480px,
+  'xs': 320px,
+);
