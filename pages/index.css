@@ -701,6 +701,11 @@ template {
 .gradient-road__description {
   position: relative;
 }
+@media screen and (max-width: 767.98px) {
+  .gradient-road__description {
+    height: 500px;
+  }
+}
 .gradient-road__title {
   transform: translateY(100%);
   transition: opacity 0.5s, transform 0.9s;
@@ -722,12 +727,24 @@ template {
   transform: translateY(0);
   opacity: 0.7;
 }
+@media screen and (max-width: 767.98px) {
+  .gradient-road__subtitle {
+    top: auto;
+    margin-top: 40px;
+  }
+}
 .gradient-road__wrapper {
   padding-top: 302px;
   display: flex;
   height: 400px;
   overflow: hidden;
   gap: 100px;
+}
+@media screen and (max-width: 767.98px) {
+  .gradient-road__wrapper {
+    padding-top: 80px;
+    height: 335px;
+  }
 }
 .gradient-road__icons {
   position: relative;
@@ -751,6 +768,11 @@ template {
   aspect-ratio: 1.625/1;
   position: absolute;
   transition: all ease 1s;
+}
+@media screen and (max-width: 767.98px) {
+  .gradient-road__image {
+    max-width: 540px;
+  }
 }
 .gradient-road__buttons {
   margin-top: 50px;
