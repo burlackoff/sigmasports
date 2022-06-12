@@ -12,7 +12,7 @@
 
   &__menu {
     list-style: none;
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
     display: flex;
     gap: 40px;
@@ -45,6 +45,10 @@
     display: flex;
     position: relative;
     height: 430px;
+
+    @include lg {
+      height: 340px;
+    }
   }
 
   &__list-card {

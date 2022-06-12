@@ -1,4 +1,10 @@
 .section-title {
   @include title-text;
   max-width: 460px;
+
+  @include md {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 100%;
+  }
 }

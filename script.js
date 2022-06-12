@@ -54,14 +54,21 @@ const sliderIcon = document.querySelector('.gradient-road__icons');
 const slidesIcon = document.querySelectorAll('.gradient-road__icon');
 const iconCounter = slidesIcon.length;
 let activeIconIndex = 0;
-const textSlide = document.querySelectorAll('.gradient-road__info');
+const textSlide = document.querySelectorAll('.gradient-road__title');
+const subtextSlide = document.querySelectorAll('.gradient-road__subtitle');
 const textCounter = textSlide.length;
 let activeTextSlide = 0;
+
+function getWidth() {
+  let width = document.querySelector('.gradient-road__image').offsetWidth + 40;
+  return width
+}
+
 
 function init() {
   let counter = 0;
   slides.forEach(item => {
-    item.style.left = counter * 690 + 'px';
+    item.style.left = counter * getWidth() + 'px';
     counter++;
   })
   slidesIcon[activeIconIndex].style.left = 100 + 'px';
@@ -92,13 +99,13 @@ function next() {
   let slider = document.querySelector('.gradient-road__images');
 
   slides2.forEach(item => {
-    item.style.left = item.offsetLeft - 690 + 'px';
+    item.style.left = item.offsetLeft - getWidth() + 'px';
   })
   
   setTimeout(() => {
     let slide = slides2[0].cloneNode(true);
 
-    slide.style.left = (slides2.length - 1) *690 + 'px';
+    slide.style.left = (slides2.length - 1) * getWidth() + 'px';
     slider.append(slide);
     slides2[0].remove();
 
@@ -116,13 +123,13 @@ function prev() {
   let slider1 = document.querySelector('.gradient-road__images');
   let slide = slides3[slides3.length - 1].cloneNode(true);
 
-  slide.style.left = -690 + 'px';
+  slide.style.left = -getWidth() + 'px';
   slider1.insertBefore(slide, slides3[0]);
   slides3[slides3.length - 1].remove();
   slides3 = document.querySelectorAll('.gradient-road__image');
 
   slides3.forEach(item => {
-    item.style.left = item.offsetLeft + 690 + 'px';
+    item.style.left = item.offsetLeft + getWidth() + 'px';
   })
 
   setTimeout(() => {
@@ -163,12 +170,17 @@ function slideText(direction) {
       activeTextSlide = textCounter - 1;
     }
   }
-  textSlide[activeTextSlide].classList.add('gradient-road__info_active');
+  textSlide[activeTextSlide].classList.add('gradient-road__title_active');
+  subtextSlide[activeTextSlide].classList.add('gradient-road__subtitle_active');
 }
 
 function deleClassActive() {
   textSlide.forEach(text => {
-    text.classList.remove('gradient-road__info_active');
+    text.classList.remove('gradient-road__title_active');
+    
+  })
+  subtextSlide.forEach(text => {
+    text.classList.remove('gradient-road__subtitle_active');
   })
 }
 //finish

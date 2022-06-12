@@ -1,13 +1,31 @@
 .train {
-  width: 100%;
   padding: 150px 120px 120px 120px;
   display: flex;
-  justify-content: space-between;
   box-sizing: border-box;
   flex-wrap: wrap;
 
+  @include ml {
+    padding-top: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    @include ml {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
   &__subtitle {
     margin-top: 50px;
+
+    @include ml {
+      margin: 0;
+    }
   }
 
   &__list {
@@ -17,6 +35,10 @@
     list-style: none;
     display: flex;
     gap: 30px;
+
+    @include ml {
+      margin: 0;
+    }
   }
 
   &__link {
@@ -29,8 +51,15 @@
   }
 
   &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
     max-width: 580px;
     width: 100%;
     object-fit: contain;
+
+    @include ml {
+      position: initial;
+    }
   }
 }

@@ -6,6 +6,21 @@
   height: 856px;
   display: flex;
   
+  @include lg {
+    height: auto;
+    justify-content: center;
+    padding-right: 120px;
+  }
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      gap: 40px;
+    }
+  }
+
   &__subtitle {
     margin-top: 50px;
   }
@@ -18,6 +33,10 @@
     @include text;
     display: flex;
     margin-top: 167px;
+    
+    @include lg {
+      display: none;
+    }
   }
 
   &__name-bike::after {
@@ -49,7 +68,15 @@
   }
 
   &__card-wrapper {
-    padding: 267px 0 79px 0;
+    position: absolute;
+    left: 630px;
+    padding: 227px 0 79px 0;
+    box-sizing: border-box;
+    height: 777px;
+
+    @include lg {
+      left: auto;
+    }
   }
   
   &__card-bike {
@@ -59,11 +86,16 @@
   }
 
   &__image {
+    display: block;
     position: absolute;
     top: 20px;
     right: 0;
     max-width: 610px;
     width: 100%;
     z-index: -1;
+    
+    @include lg {
+      position: initial;
+    }
   }
 }
