@@ -59,11 +59,15 @@ const subtextSlide = document.querySelectorAll('.gradient-road__subtitle');
 const textCounter = textSlide.length;
 let activeTextSlide = 0;
 
+document.querySelector('.gradient-road__image').onload = () => {
+  getWidth()
+  init()
+}
+
 function getWidth() {
   let width = document.querySelector('.gradient-road__image').offsetWidth + 40;
   return width
 }
-
 
 function init() {
   let counter = 0;
@@ -73,8 +77,6 @@ function init() {
   })
   slidesIcon[activeIconIndex].style.left = 100 + 'px';
 }
-
-init()
 
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', nextSlide);
