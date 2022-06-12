@@ -17,6 +17,12 @@
   transition: background .3s ease-in-out;
   text-decoration: none;
   text-align: center;
+
+  @include md {
+    width: 100%;
+    font-size: 13px;
+    line-height: 19px;
+  }
 }
 
 .button:hover{

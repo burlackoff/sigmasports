@@ -6,4 +6,8 @@
   top: 0;
   z-index: 100;
   background-color: $color-bg;
+
+  @include md {
+    padding: 20px;
+  }
 }

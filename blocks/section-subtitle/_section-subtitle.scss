@@ -1,4 +1,10 @@
 .section-subtitle {
   @include subtitle-text;
   max-width: 460px;
+
+  @include md {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 100%;
+  }
 }

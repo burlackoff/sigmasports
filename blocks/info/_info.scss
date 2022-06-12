@@ -12,6 +12,10 @@
     padding-right: 120px;
   }
   
+  @include md {
+    padding: 40px 18px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -23,10 +27,18 @@
 
   &__subtitle {
     margin-top: 50px;
+
+    @include lg {
+      margin-top: 0;
+    }
   }
 
   &__button {
     margin-top: 50px;
+
+    @include lg {
+      margin-top: 0;
+    }
   }
 
   &__name-bike {
@@ -96,6 +108,7 @@
 
     @include lg {
       position: initial;
+      align-self: center;
     }
   }
 }
