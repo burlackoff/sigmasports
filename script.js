@@ -54,7 +54,8 @@ const sliderIcon = document.querySelector('.gradient-road__icons');
 const slidesIcon = document.querySelectorAll('.gradient-road__icon');
 const iconCounter = slidesIcon.length;
 let activeIconIndex = 0;
-const textSlide = document.querySelectorAll('.gradient-road__info');
+const textSlide = document.querySelectorAll('.gradient-road__title');
+const subtextSlide = document.querySelectorAll('.gradient-road__subtitle');
 const textCounter = textSlide.length;
 let activeTextSlide = 0;
 
@@ -163,12 +164,17 @@ function slideText(direction) {
       activeTextSlide = textCounter - 1;
     }
   }
-  textSlide[activeTextSlide].classList.add('gradient-road__info_active');
+  textSlide[activeTextSlide].classList.add('gradient-road__title_active');
+  subtextSlide[activeTextSlide].classList.add('gradient-road__subtitle_active');
 }
 
 function deleClassActive() {
   textSlide.forEach(text => {
-    text.classList.remove('gradient-road__info_active');
+    text.classList.remove('gradient-road__title_active');
+    
+  })
+  subtextSlide.forEach(text => {
+    text.classList.remove('gradient-road__subtitle_active');
   })
 }
 //finish

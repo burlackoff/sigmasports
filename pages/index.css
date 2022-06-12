@@ -699,28 +699,31 @@ template {
   }
 }
 .gradient-road__description {
-  height: 222px;
+  position: relative;
 }
-.gradient-road__info {
-  position: absolute;
+.gradient-road__title {
   transform: translateY(100%);
   transition: opacity 0.5s, transform 0.9s;
   opacity: 0;
+  position: absolute;
 }
-@media screen and (max-width: 767.98px) {
-  .gradient-road__info {
-    width: 95%;
-  }
-}
-.gradient-road__info_active {
+.gradient-road__title_active {
   transform: translateY(0);
   opacity: 1;
 }
 .gradient-road__subtitle {
-  margin-top: 50px;
+  position: absolute;
+  top: 100px;
+  transform: translateY(100%);
+  transition: opacity 0.5s, transform 0.9s;
+  opacity: 0;
+}
+.gradient-road__subtitle_active {
+  transform: translateY(0);
+  opacity: 0.7;
 }
 .gradient-road__wrapper {
-  margin-top: 80px;
+  padding-top: 302px;
   display: flex;
   height: 400px;
   overflow: hidden;
