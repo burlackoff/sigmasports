@@ -191,22 +191,37 @@ function deleClassActive() {
 //start
 const btnList = document.querySelectorAll('.bicycle__menu-link');
 const bikeList = document.querySelectorAll('.bicycle__list-card');
+const bikeMenuItem = document.querySelectorAll('.bicycle__menu-item');
+const bikeMenu = document.querySelector('.bicycle__menu');
 
+bikeMenu.addEventListener('click', showMenu)
+
+function showMenu() {
+  bikeMenuItem.forEach(item => {
+    item.classList.add('bicycle__menu-item_active');
+  })
+  
+  bikeMenu.removeEventListener('click', showMenu)
+}
 
 
 btnList.forEach(btn => {
-  btn.addEventListener('click', activeBtn) 
+  btn.addEventListener('click', activeBtn);
 })
 
 function activeBtn() {
-  removeClass()
+  bikeMenu.addEventListener('click', showMenu);
+  removeClass();
   this.classList.add('bicycle__menu-link_active');
   if (this === btnList[0]) {
     bikeList[0].classList.add('bicycle__list-card_active');
+    bikeMenuItem[0].classList.add('bicycle__menu-item_active');
   } else if (this === btnList[1]) {
     bikeList[1].classList.add('bicycle__list-card_active');
+    bikeMenuItem[1].classList.add('bicycle__menu-item_active');
   } else if (this === btnList[2]) {
     bikeList[2].classList.add('bicycle__list-card_active');
+    bikeMenuItem[2].classList.add('bicycle__menu-item_active');
   }
 }
 
@@ -216,6 +231,9 @@ function removeClass() {
   })
   bikeList.forEach(card => {
     card.classList.remove('bicycle__list-card_active');
+  })
+  bikeMenuItem.forEach(item => {
+    item.classList.remove('bicycle__menu-item_active');
   })
 }
 //finish

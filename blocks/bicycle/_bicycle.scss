@@ -4,10 +4,28 @@
   flex-direction: column;
   gap: 120px;
 
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+
+    padding: 40px 18px;
+    gap: 0;
+  }
+
   &__wrapper-head {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   &__menu {
@@ -17,16 +35,49 @@
     display: flex;
     gap: 40px;
     align-items: flex-end;
+
+    @include md {
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      border: 1px solid $color-br-before;
+      width: 150px;
+      position: absolute;
+      z-index: 99;
+    }
+  }
+
+  &__menu-item {
+    @include md {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      visibility: hidden;
+
+      &_active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
   }
 
   &__menu-link {
+    width: 100%;
     padding: 0;
     border: none;
     cursor: pointer;
-    background-color: transparent;
+    // background-color: $color-bg;
     color: $color-main-text-noactive;
     transition: .2s;
     @include text-bike;
+
+    @include md {
+      padding: 8px 0 8px 12px;
+      text-align: start;
+    }
 
     &:hover{
       opacity: 0.6;
@@ -48,6 +99,10 @@
 
     @include lg {
       height: 340px;
+    }
+
+    @include md {
+      margin-top: 60px;
     }
   }
 
