@@ -8,6 +8,19 @@
     padding-top: 60px;
   }
 
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+
+    padding: 40px 18px;
+  }
+
   &__wrapper {
     position: relative;
     width: 100%;
@@ -17,6 +30,10 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+    }
+
+    @include md {
+      align-items: flex-start;
     }
   }
 
@@ -44,6 +61,11 @@
   &__link {
     transition: .2s;
     @include text-link;
+
+    @include md {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__link:hover {
