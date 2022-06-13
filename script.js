@@ -201,6 +201,12 @@ bikeMenu.addEventListener('mouseenter', () => {
   })
 })
 
+bikeMenu.addEventListener('click', () => {
+  bikeMenuItem.forEach(item => {
+    item.classList.add('bicycle__menu-item_active');
+  })
+})
+
 bikeMenu.addEventListener('mouseleave', () => {
   bikeMenuItem.forEach(item => {
     if (item !== activeBike) {
