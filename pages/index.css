@@ -880,6 +880,7 @@ template {
   padding: 0;
   border: none;
   cursor: pointer;
+  background-color: #F4F4F4;
   color: rgba(34, 34, 34, 0.7);
   transition: 0.2s;
   margin: 0;
