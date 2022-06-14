@@ -1,19 +1,38 @@
 .gradient-road {
-  width: 100%;
   padding: 60px 0 60px 120px;
   box-sizing: border-box;
-
-
-  &__description {
-    max-width: 460px;
-    height: 222px;
+  position: relative;
+  
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+  
+    padding: 40px 18px;
   }
 
-  &__info {
-    position: absolute;
+  &__description {
+    position: relative;
+
+    @include md {
+      height: 500px;
+    }
+
+    @include sm {
+      height: 400px;
+    }
+  }
+
+  &__title {
     transform: translateY(100%);
     transition: opacity .5s, transform .9s;
     opacity: 0;
+    position: absolute;
 
     &_active {
       transform: translateY(0);
@@ -21,14 +40,39 @@
     }
   }
 
-  &__subtitle {margin-top: 50px;}
+  &__subtitle {
+    position: absolute;
+    top: 100px;
+    transform: translateY(100%);
+    transition: opacity .5s, transform .9s;
+    opacity: 0;
+
+    &_active {
+      transform: translateY(0);
+      opacity: .7;
+    }
+
+    @include md {
+      top: auto;
+      margin-top: 40px;
+    }
+  }
 
   &__wrapper {
-    margin-top: 80px;
+    padding-top: 302px;
     display: flex;
     height: 400px;
     overflow: hidden;
     gap: 100px;
+
+    @include md {
+      padding-top: 80px;
+      height: 335px;
+    }
+
+    @include sm {
+      height: 175px;
+    }
   }
 
   &__icons {
@@ -56,12 +100,28 @@
     aspect-ratio: 1.625 / 1;
     position: absolute;
     transition: all ease 1s;
+
+    @include md {
+      max-width: 540px;
+    }
+
+    @include sm {
+      max-width: 284px;
+    }
   }
 
   &__buttons {
     margin-top: 50px;
     display: flex;
     gap: 20px;
+
+    @include md {
+      margin: 0;
+      position: absolute;
+      top: 87px;
+      right: 18px;
+      gap: 10px;  
+    }
   }
 
   &__button {
@@ -69,10 +129,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(67, 67, 67, 1) url(../images/icons/button-back_dark-theme.svg) center no-repeat;
+    background: #434343 url(../images/icons/button-back_dark-theme.svg) center no-repeat;
     border: none;
     cursor: pointer;
     transition: .2s;
+
+    @include md {
+      width: 24px;
+      height: 24px;
+      background-size: 50% 50%;
+    }
   }
 
   &__button:hover {

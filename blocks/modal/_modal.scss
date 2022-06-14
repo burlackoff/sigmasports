@@ -1,0 +1,23 @@
+.modal {
+  padding: 70px 55px 30px 55px;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: $color-bg;
+  z-index: 100;
+  overflow: auto;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+  }
+}

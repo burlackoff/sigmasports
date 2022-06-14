@@ -5,13 +5,17 @@
   box-sizing: border-box;
   height: 856px;
   display: flex;
-  
+
   @include lg {
     height: auto;
     justify-content: center;
     padding-right: 120px;
   }
   
+  @include md {
+    padding: 40px 18px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -23,17 +27,25 @@
 
   &__subtitle {
     margin-top: 50px;
+
+    @include lg {
+      margin-top: 0;
+    }
   }
 
   &__button {
     margin-top: 50px;
+
+    @include lg {
+      margin-top: 0;
+    }
   }
 
   &__name-bike {
     @include text;
     display: flex;
     margin-top: 167px;
-    
+
     @include lg {
       display: none;
     }
@@ -60,11 +72,11 @@
     position: sticky;
     top: 347px;
     z-index: 1;
-    transition: transform .2s;
-  }
 
-  &__card-link:hover {
-    transform: scale(1.1);
+    @include sm {
+      position: static;
+      padding: 10px 30px;
+    }
   }
 
   &__card-wrapper {
@@ -83,6 +95,15 @@
     max-width: 340px;
     width: 100%;
     aspect-ratio: 1.3/1;
+    transition: transform .2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include sm {
+      max-width: 200px;
+    }
   }
 
   &__image {
@@ -93,9 +114,14 @@
     max-width: 610px;
     width: 100%;
     z-index: -1;
-    
+
     @include lg {
       position: initial;
+      align-self: center;
+    }
+
+    @include sm {
+      padding-left: 20px;
     }
   }
 }
