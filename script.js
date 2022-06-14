@@ -1,17 +1,24 @@
 //Кнопка переключения темы
 //start
-const buttonSwitchTheme = document.querySelector('.switch__slider');
+const buttonsSwitchTheme = document.querySelectorAll('.switch__slider');
 const theme = document.querySelector("#theme-link");
 
-buttonSwitchTheme.addEventListener('click', () => {
-  buttonSwitchTheme.classList.toggle('switch__slider_active');
-  buttonSwitchTheme.classList.toggle('switch__slider_active::before');
-  if (theme.getAttribute("href") == "./pages/index.css") {
-    theme.href = "./pages/index_dark-theme.css";
-  } else {
-    theme.href = "./pages/index.css";
-  }
+buttonsSwitchTheme.forEach(buttonSwitchTheme => {
+  buttonSwitchTheme.addEventListener('click', () => {
+    buttonsSwitchTheme.forEach(button => {
+      button.classList.toggle('switch__slider_active');
+      button.classList.toggle('switch__slider_active::before');
+    })
+    if (theme.getAttribute("href") == "./pages/index.css") {
+      theme.href = "./pages/index_dark-theme.css";
+    } else {
+      theme.href = "./pages/index.css";
+    }
+  })
 })
+
+
+
 //finish
 
 //функционирование формы
@@ -235,6 +242,9 @@ function activeBtn() {
     bikeMenuItem[2].classList.add('bicycle__menu-item_active');
     activeBike = bikeMenu.querySelector('.bicycle__menu-item_active');
   }
+  bikeSliderActive = document.querySelector('.bicycle__list-card_active')
+  bikeSlide = bikeSliderActive.querySelectorAll('.bicycle__item-card');
+  bikeSlide[0].classList.add('bicycle__item-card_active');
 } 
 
 function removeClass() {
@@ -249,3 +259,53 @@ function removeClass() {
   })
 }
 //finish
+
+//Слайдер велосипедов mobile
+//start
+let bikeSliderActive = document.querySelector('.bicycle__list-card_active')
+let bikeSlide = bikeSliderActive.querySelectorAll('.bicycle__item-card');
+const bikeDots = document.querySelectorAll('.bicycle__dot');
+
+bikeDots.forEach(dot => {
+  dot.addEventListener('click', changeSlideBike)
+})
+
+function changeSlideBike() {
+  removeClassBike()
+  this.classList.add('bicycle__dot_active');
+  if (this === bikeDots[0]) {
+    bikeSlide[0].classList.add('bicycle__item-card_active')
+  }
+  else if (this === bikeDots[1]) {
+    bikeSlide[1].classList.add('bicycle__item-card_active')
+  }
+  else if (this === bikeDots[2]) {
+    bikeSlide[2].classList.add('bicycle__item-card_active')
+  }
+}
+
+function removeClassBike() {
+  bikeSlide.forEach(slide => {
+    slide.classList.remove('bicycle__item-card_active')
+  })
+  bikeDots.forEach(dot => {
+    dot.classList.remove('bicycle__dot_active')
+  })
+}
+//finish
+
+//modal window
+
+const buttonModal = document.querySelector('.header__button');
+const modal = document.querySelector('.modal');
+const body = document.querySelector('.page');
+
+buttonModal.addEventListener('click', () => {
+  buttonModal.firstElementChild.classList.toggle('header__button-line_active');
+  modal.classList.toggle('modal_active');
+  if (modal.classList.contains('modal_active')) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = '';
+  }
+})

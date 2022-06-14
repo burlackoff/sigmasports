@@ -9,6 +9,9 @@
   </head>
   <body class="page">
     <header class="header">
+      <button class="header__button">
+        <span class="header__button-line"></span>
+      </button>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
@@ -178,7 +181,7 @@
         </div>
         <div class="bicycle__wrapper-card">
           <ul class="bicycle__list-card bicycle__list-card_active">
-            <li class="bicycle__item-card">
+            <li class="bicycle__item-card bicycle__item-card_active">
               <a
                 href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN "
                 class="bicycle__link-card"
@@ -310,6 +313,11 @@
             </li>
           </ul>
         </div>
+        <div class="bicycle__dots">
+          <div class="bicycle__dot bicycle__dot_active"></div>
+          <div class="bicycle__dot" type="button" aria-label="Тык."></div>
+          <div class="bicycle__dot" type="button" aria-label="Тык."></div>
+        </div>
       </section>
       <section id="train" class="train">
         <div class="train__wrapper">
@@ -374,6 +382,29 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <nav class="nav nav_modal_active">
+        <ul class="nav__list nav__list_direction_column">
+          <li class="nav__item">
+            <a href="#gradient-road" class="nav__link">Покрытия и градиенты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#bicycle" class="nav__link">Велосипеды</a>
+          </li>
+          <li class="nav__item">
+            <a href="#train" class="nav__link">Тренировки</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="switch-block">
+        <div class="switch-block__image-light"></div>
+        <label class="switch">
+          <input type="checkbox" class="switch__input" />
+          <span class="switch__slider"></span>
+        </label>
+        <div class="switch-block__image-dark"></div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -37,7 +37,7 @@
     align-items: flex-end;
 
     @include md {
-      margin-top: 40px;
+      margin-top: 70px;
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
@@ -79,6 +79,11 @@
       text-align: start;
     }
 
+    @include sm {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
     &:hover{
       opacity: 0.6;
     }
@@ -102,7 +107,15 @@
     }
 
     @include md {
-      margin-top: 60px;
+      margin-top: 100px;
+    }
+
+    @include sm {
+      height: 450px;
+    }
+    
+    @include breakpoint(320px) {
+      height: 306px;
     }
   }
 
@@ -118,6 +131,10 @@
     opacity: 0;
     z-index: -1;
 
+    @include sm {
+      width: 100%;
+    }
+
     &_active {
       transform: translateY(0);
       opacity: 1;
@@ -132,27 +149,84 @@
     justify-content: space-between;
     align-items: start;
     gap: 22px;
+
+    @include sm {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+
   }
 
   &__link-card {
     padding: 20px;
     box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
-    transition: transform .2s;
     background-color: #F4F4F4;
-  }
 
-  &__link-card:hover {
-    transform: scale(1.1);
+    @include sm {
+      padding: 15px 15px 35px 15px;
+    }
   }
 
   &__image {
     max-width: 340px;
     width: 100%;
     aspect-ratio: 1 / 1;
+    transition: transform .2s;
+
+    @include sm {
+      max-width: 450px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      @include sm {
+        transform: scale(1.05);
+      }
+    }
   }
 
   &__name-card {
     @include text-bike;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__dots {
+    display: none;
+
+
+    @include sm {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background-color: $color-copyright;
+    border-radius: 100%;
+
+    &_active {
+      background-color: $color-main-text;
+    }
   }
 }
