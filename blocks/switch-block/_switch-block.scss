@@ -1,0 +1,18 @@
+.switch-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+
+  &__image-dark {
+    width: 20px;
+    height: 20px;
+    background: url(../images/icons/dark.svg) center no-repeat;
+  }
+
+  &__image-light {
+    width: 28px;
+    height: 28px;
+    background: url(../images/icons/light.svg) center no-repeat;
+  } 
+}

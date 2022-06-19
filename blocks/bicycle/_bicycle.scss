@@ -1,0 +1,232 @@
+.bicycle {
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+
+    padding: 40px 18px;
+    gap: 0;
+  }
+
+  &__wrapper-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+
+    @include md {
+      margin-top: 70px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      border: 1px solid $color-br-before;
+      width: 150px;
+      position: absolute;
+      z-index: 99;
+    }
+  }
+
+  &__menu-item {
+    @include md {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      visibility: hidden;
+
+      &_active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+  }
+
+  &__menu-link {
+    width: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: $color-bg;
+    color: $color-main-text-noactive;
+    transition: .2s;
+    @include text-bike;
+
+    @include md {
+      padding: 8px 0 8px 12px;
+      text-align: start;
+    }
+
+    @include sm {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
+    &:hover{
+      opacity: 0.6;
+    }
+    &_active {
+      font-weight: 600;
+      color: $color-main-text;
+    }
+
+    &_active:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__wrapper-card {
+    display: flex;
+    position: relative;
+    height: 430px;
+
+    @include lg {
+      height: 340px;
+    }
+
+    @include md {
+      margin-top: 100px;
+    }
+
+    @include sm {
+      height: 450px;
+    }
+    
+    @include breakpoint(320px) {
+      height: 306px;
+    }
+  }
+
+  &__list-card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity .5s, transform .8s;
+    opacity: 0;
+    z-index: -1;
+
+    @include sm {
+      width: 100%;
+    }
+
+    &_active {
+      transform: translateY(0);
+      opacity: 1;
+      z-index: auto;
+    }
+  }
+
+
+  &__item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 22px;
+
+    @include sm {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+
+  }
+
+  &__link-card {
+    padding: 20px;
+    box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    background-color: #F4F4F4;
+
+    @include sm {
+      padding: 15px 15px 35px 15px;
+    }
+  }
+
+  &__image {
+    max-width: 340px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transition: transform .2s;
+
+    @include sm {
+      max-width: 450px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      @include sm {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__name-card {
+    @include text-bike;
+
+    @include sm {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__dots {
+    display: none;
+
+
+    @include sm {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background-color: $color-copyright;
+    border-radius: 100%;
+
+    &_active {
+      background-color: $color-main-text;
+    }
+  }
+}

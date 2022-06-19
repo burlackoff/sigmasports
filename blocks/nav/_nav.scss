@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  justify-content: end;
+
+  @include sm {
+    display: none;
+  }
+  &_modal_active {
+    display: block;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    &_direction_column {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    transition: 0.2s;
+    @include nav-text-link;
+
+    &_modal_active {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
+}

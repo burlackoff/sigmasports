@@ -1,0 +1,49 @@
+.form {
+  position: relative;
+  max-width: 360px;
+
+  &__input {
+    padding: 11px 20px;
+    border: 1px solid $color-br;  
+    width: 100%;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: $color-main-text;
+  }
+
+  &__input:hover {
+    cursor: pointer;
+  }
+
+  &__input:hover::placeholder {
+    color: $color-main-text;
+    transition: color .2s;
+  }
+
+  &__input:focus {
+    border-color: $color-br-focus;
+    outline: none;
+  }
+
+  &__button {
+    color: $color-main-text;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    border: none;
+    padding: 0;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  &__button_active {
+    display: block;
+  }
+}

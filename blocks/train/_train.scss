@@ -1,0 +1,87 @@
+.train {
+  padding: 150px 120px 120px 120px;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  @include ml {
+    padding-top: 60px;
+  }
+
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+
+    padding: 40px 18px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    @include ml {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include md {
+      align-items: flex-start;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 50px;
+
+    @include ml {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: 182px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+
+    @include ml {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    transition: .2s;
+    @include text-link;
+
+    @include md {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 580px;
+    width: 100%;
+    object-fit: contain;
+
+    @include ml {
+      position: initial;
+    }
+  }
+}

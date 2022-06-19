@@ -1,0 +1,151 @@
+.gradient-road {
+  padding: 60px 0 60px 120px;
+  box-sizing: border-box;
+  position: relative;
+  
+  @include md {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      border: 1px solid $color-br-before;
+      height: 0;
+      margin-bottom: 40px;
+    }
+  
+    padding: 40px 18px;
+  }
+
+  &__description {
+    position: relative;
+
+    @include md {
+      height: 500px;
+    }
+
+    @include sm {
+      height: 400px;
+    }
+  }
+
+  &__title {
+    transform: translateY(100%);
+    transition: opacity .5s, transform .9s;
+    opacity: 0;
+    position: absolute;
+
+    &_active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 100px;
+    transform: translateY(100%);
+    transition: opacity .5s, transform .9s;
+    opacity: 0;
+
+    &_active {
+      transform: translateY(0);
+      opacity: .7;
+    }
+
+    @include md {
+      top: auto;
+      margin-top: 40px;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 302px;
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+    gap: 100px;
+
+    @include md {
+      padding-top: 80px;
+      height: 335px;
+    }
+
+    @include sm {
+      height: 175px;
+    }
+  }
+
+  &__icons {
+    position: relative;
+    margin-left: -100px;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    z-index: 1;
+    transition: all ease 1s;
+  }
+  
+  &__images {
+    display: flex;
+    position: relative;
+  }
+
+  &__image {
+    max-width: 650px;
+    aspect-ratio: 1.625 / 1;
+    position: absolute;
+    transition: all ease 1s;
+
+    @include md {
+      max-width: 540px;
+    }
+
+    @include sm {
+      max-width: 284px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+
+    @include md {
+      margin: 0;
+      position: absolute;
+      top: 87px;
+      right: 18px;
+      gap: 10px;  
+    }
+  }
+
+  &__button {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(235, 235, 235, 1) url(../images/icons/button-back.svg) center no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+
+    @include md {
+      width: 24px;
+      height: 24px;
+      background-size: 50% 50%;
+    }
+  }
+
+  &__button:hover {
+    opacity: 0.6;
+  }
+
+  &__button_right {
+    transform: rotate(180deg);
+  }
+}

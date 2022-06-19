@@ -1,0 +1,18 @@
+{
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.linkedEditing": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/pages"
+    }
+  ]
+}

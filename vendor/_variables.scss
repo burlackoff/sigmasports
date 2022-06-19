@@ -1,0 +1,20 @@
+//Цвета
+$color-main-text: #151515;
+$color-main-text-noactive:rgba(34, 34, 34, .7);
+$color-text: #222222;
+$color-button: #FFFFFF;
+$color-bg: #F4F4F4;
+$color-bg-footer: #EFEFEF;
+$color-br: rgba(199, 199, 199, 0.5);
+$color-br-focus: rgb(199, 199, 199);
+$color-copyright: #CFCFCF;
+$color-br-before: #E3E3E3;
+
+$breakpoints: (
+  'xl': 1439.98px,
+  'ml': 1279.98px,
+  'lg': 1189.98px,
+  'md': 767.98px,
+  'sm': 479.98px,
+  'xs': 319.98px,
+);
